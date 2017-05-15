@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            padding:0;margin:0;
+            list-style: none;
+            height:100%;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            text-align: center;
+            border-bottom: 1px solid #000;
+            height:15%;
+        }
+        .main{
+            height:85%;border-bottom: 5px solid #555;
+        }
+        .left{
+            height:100%;width:20%;float:left;
+            border-right: 2px solid #666;
+        }
+        .right{
+            height:100%;width:80%;float:left;
+        }
+        iframe{
+            width:100%;height:100%;border:none;
+        }
+    </style>
+</head>
+<body>
+   <header>
+       欢迎 <%=user%> 来到后台管理中心
+   </header>
+   <div class="main">
+       <div class="left">
+            <ul>
+                <li>
+                    <span>用户管理</span>
+                    <ul>
+                        <li>
+                            <a href="/admin/addUser" target="show">添加用户</a>
+                        </li>
+                        <li>
+                            <a href="/admin/editUser">编辑用户
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <span>内容管理</span>
+                    <ul>
+                        <li>
+                            <a href="/admin/addCon" target="show">添加内容</a>
+                        </li>
+                        <li>
+                            <a href="/admin/showCon" target="show">查看内容
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <span>通讯录管理</span>
+                    <ul>
+                        <li>
+                            <a href="/phone/addPhone" target="show">添加通讯录</a>
+                        </li>
+                        <li>
+                            <a href="/phone/showPhone" target="show">查看通讯录
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+       </div>
+       <div class="right">
+           <iframe src="" frameborder="0" name="show">
+
+           </iframe>
+       </div>
+   </div>
+</body>
+</html>
